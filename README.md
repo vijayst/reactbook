@@ -2,6 +2,6 @@
 Source code for my React book
 
 ## List of Tutorials
-* First app
-* Simple form
+* [First app](https://github.com/vijayst/reactbook/tree/master/firstapp)
+* [Simple form](https://github.com/vijayst/reactbook/tree/master/simpleform)
 
