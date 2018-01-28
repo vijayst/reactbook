@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Transition from 'react-transition-group/Transition';
+import { Transition } from 'react-transition-group';
 
 class App extends Component {
     state = { show: false };
