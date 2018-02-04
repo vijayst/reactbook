@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 class App extends Component {
     state = { items: ['Hello', 'World'] };
@@ -14,14 +15,18 @@ class App extends Component {
     render() {
         return (
             <div className="todo">
-                {this.state.items.map((item, index) => (
-                    <div>
-                        {item}
-                            <button onClick={() => this.handleRemove(index)}>
-                                &times;
-                            </button>
-                    </div>
-                ))}
+                <TransitionGroup>
+                    {this.state.items.map((item, index) => (
+                        <CSSTransition timeout={1000} classNames="fade">
+                            <div>
+                                {item}
+                                <button onClick={() => this.handleRemove(index)}>
+                                    &times;
+                                </button>
+                            </div>
+                        </CSSTransition>
+                    ))}
+                </TransitionGroup>
             </div>
         );
     }
