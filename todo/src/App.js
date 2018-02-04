@@ -17,7 +17,7 @@ class App extends Component {
             <div className="todo">
                 <TransitionGroup>
                     {this.state.items.map((item, index) => (
-                        <CSSTransition timeout={1000} classNames="fade">
+                        <CSSTransition key={item} timeout={1000} classNames="fade">
                             <div>
                                 {item}
                                 <button onClick={() => this.handleRemove(index)}>
